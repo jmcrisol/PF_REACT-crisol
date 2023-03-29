@@ -1,0 +1,6 @@
+.menu {
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f3e1ff), color-stop(#f4e6ff), color-stop(#f6eaff), color-stop(#f7efff), to(#f9f3ff));
+    background-image: linear-gradient(to bottom, #f3e1ff, #f4e6ff, #f6eaff, #f7efff, #f9f3ff);
+  }
