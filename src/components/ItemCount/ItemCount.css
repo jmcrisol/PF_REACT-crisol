@@ -1,0 +1,17 @@
+.Controles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.botonAgregar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Button{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.btn-agregar{
+    
+}

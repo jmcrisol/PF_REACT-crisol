@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { getProducts } from "../../asyncmock";
 import ItemList from "../ItemList/ItemList";
+import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -15,7 +16,7 @@ const ItemListContainer = () => {
   return (
     <div>
       <h2>Catálogo de Productos</h2>
-      <ItemList products={products} />
+      <div className=""><ItemList products={products}/></div>
     </div>
   );
 };
