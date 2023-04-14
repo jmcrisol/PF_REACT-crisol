@@ -21,12 +21,12 @@ const disminuye = () => {
 return(
     <div className="Contador my-2">
         <div className='Controles'>
-            <button className='Button btn btn-primary' onClick={disminuye}>-</button>
+            <button className='Button btn btn-dark' onClick={disminuye}>-</button>
             <h4 className='Numero'>{cantidad}</h4>
-            <button className='Button btn btn-primary' onClick={aumenta}>+</button>
+            <button className='Button btn btn-dark' onClick={aumenta}>+</button>
         </div>
         <div className='botonAgregar'>
-            <button className='btn-agregar mt-4 btn btn-primary' onClick={()=> onAdd(cantidad)} disabled={!stock}>Agregar al carrito
+            <button className='btn-agregar mt-4 btn btn-secondary' onClick={()=> onAdd(cantidad)} disabled={!stock}>Agregar al carrito
             </button>
         </div>
     </div>
