@@ -54,17 +54,22 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Productos
+                  Portalibretas
                 </a>
                 <ul className="dropdown-menu border-0 shadow">
                   <li>
                     <a className="dropdown-item" href="#">
-                      Portalibretas
+                      Celestes
                     </a>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#">
-                      Combos
+                      Rosas
+                    </a>
+                  </li>
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      Otros
                     </a>
                   </li>
                 </ul>
