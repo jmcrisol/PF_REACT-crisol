@@ -5,7 +5,6 @@ import "./ItemList.css";
 const ItemList = ({ products }) => {
   return (
     <div className="block">
-      {" "}
       {products.map((prod) => (
         <Item key={prod.id} {...prod} />
       ))}

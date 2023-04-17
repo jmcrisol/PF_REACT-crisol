@@ -10,12 +10,13 @@ const ItemDetail = ({ id, nombre, precio, img, categoria, descripcion, stock }) 
                 <img src={img} alt={nombre} className="card-img-top" />
                 <div className="card-body">
                 <h5 className="card-title">{nombre}</h5>
-                <p className="card-text">
+                <div className="card-text">
                     <p>ID: {id}</p>
                     <p>Categoría: {categoria}</p> 
                     <p>Precio: {precio} </p>
+                    <p>Stock: {stock}</p>
                     <p>Descripción: {descripcion} </p>
-                </p>
+                </div>
                 <ItemCount stock={stock} inicial={1}  onAdd={(cantidad) => console.log("Agregaste ", cantidad," Productos")}/>
                 </div>
             </div>

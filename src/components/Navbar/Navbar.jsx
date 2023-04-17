@@ -1,13 +1,14 @@
 import React from "react";
 import "./Navbar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <header className="sticky-top">
       <nav className="navbar navbar-expand-lg menu">
         <div className="container">
-          <a className="navbar-brand " href="#">
+          <NavLink to={`/`} className="navbar-brand " >
             {" "}
             <img
               src="https://mushiditos.com.ar/assets/img/logo.svg"
@@ -15,7 +16,7 @@ const Navbar = () => {
               width={140}
               className="d-inline-block align-text-top ms-5"
             />
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -33,23 +34,23 @@ const Navbar = () => {
           >
             <ul className="navbar-nav">
               <li className="nav-item mx-3 menu-btn">
-                <a
+                <NavLink to={`/`}
                   className="nav-link active links"
                   aria-current="page"
-                  href="#"
+                  
                 >
                   Inicio
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item mx-3 menu-btn">
-                <a className="nav-link links" href="#">
+                <a className="nav-link links disabled" href="#">
                   Nosotros
                 </a>
               </li>
               <li className="nav-item dropdown mx-3 menu-btn">
                 <a
                   className="nav-link dropdown-toggle links"
-                  href="#"
+                  
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -58,24 +59,24 @@ const Navbar = () => {
                 </a>
                 <ul className="dropdown-menu border-0 shadow">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <NavLink to={`/categoria/Celestes`} className="dropdown-item">
                       Celestes
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <NavLink to={`/categoria/Rosas`} className="dropdown-item">
                       Rosas
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <NavLink to={`/categoria/Otros`} className="dropdown-item">
                       Otros
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
               <li className="nav-item mx-3 menu-btn">
-                <a className="nav-link links" href="#">
+                <a className="nav-link links disabled" href="#">
                   Contacto
                 </a>
               </li>
