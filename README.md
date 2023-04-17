@@ -1,3 +1,13 @@
+# Captura de Navegabilidad
+![Screen-Recording-Made-with-RecordCast](https://user-images.githubusercontent.com/111879548/232529257-e7a512b6-8f78-49c8-b284-e3cca4e64396.gif)
+
+
+
+#
+#
+#
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
