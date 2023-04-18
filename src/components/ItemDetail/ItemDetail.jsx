@@ -2,6 +2,8 @@ import React from 'react'
 import "./ItemDetail.css"
 import ItemCount from '../ItemCount/ItemCount'
 
+
+
 const ItemDetail = ({ id, nombre, precio, img, categoria, descripcion, stock }) => {
   return (
     <div>

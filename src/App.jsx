@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-
+import { CarritoProvider } from './context/carritoContext';
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
 
     <div>
       <BrowserRouter>
+      <CarritoProvider>
         <Navbar/>
           <Routes>
             <Route path='/' element={<ItemListContainer/>} />
@@ -22,6 +23,7 @@ function App() {
             <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
             <Route path='*' element={<h1>404 NOT FOUND</h1>}/>
           </Routes>
+          </CarritoProvider>
       </BrowserRouter>
     </div>
 
