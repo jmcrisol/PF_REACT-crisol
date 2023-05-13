@@ -14,7 +14,7 @@ const CartWidget = () => {
 
   return (
     <>
-      <Link id="carrito" href="#">
+      <Link id="carrito" to='/cart'>
         <i className="bi bi-cart4" />
         <span
           id="cantidad"

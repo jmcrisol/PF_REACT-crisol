@@ -5,11 +5,8 @@ export const CarritoContext = createContext({carrito:[]});
 
 export const CarritoProvider = ({children}) => {
     const [carrito, setCarrito] = useState([]);
-    //para verificar por consola
-    console.log(carrito);
 
-    //Funcion agregar al carrito
-    const addItem = (item, cantidad) => {
+    const agregarProducto = (item, cantidad) => {
         if(!verificarItem(item.id)){
             setCarrito(prev => [...prev, {item, cantidad}])
         }
@@ -32,7 +29,7 @@ export const CarritoProvider = ({children}) => {
     }
 
     return(
-        <CarritoContext.Provider value={{carrito, addItem, removeItem, vaciarCarrito
+        <CarritoContext.Provider value={{carrito, agregarProducto, removeItem, vaciarCarrito
         }}>
             {children}
         </CarritoContext.Provider>
