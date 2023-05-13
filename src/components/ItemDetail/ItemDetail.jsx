@@ -9,22 +9,13 @@ import { useContext } from 'react'
 
 const ItemDetail = ({ id, nombre, precio, img, categoria, descripcion, stock }) => {
 
-  //1) Creamos un estado con la cantidad de productos agregados. 
-
   const [agregarCantidad, setAgregarCantidad] = useState(0);
 
-  ////////////////// useContext - clase 11
   const {agregarProducto} = useContext(CarritoContext);
-
-  ///////////////// useContext
-
-  //2) Creamos una función manejadora de la cantidad: 
 
   const manejadorCantidad = (cantidad) => {
     setAgregarCantidad(cantidad);
-    //console.log("Productos agregados: " + cantidad);
 
-    //Ahora acá creo un objeto con el item y la cantidad: 
     const item = {id, nombre, precio};
     agregarProducto(item, cantidad);
   }

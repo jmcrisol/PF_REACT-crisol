@@ -1,23 +1,29 @@
 import React from 'react'
 import "./ItemDetailContainer.css"
 import { useState, useEffect } from "react";
-import {getProductsById} from "../../asyncmock";
+//import {getProductsById} from "../../asyncmock";
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from "react-router-dom";
+import { db } from '../../services/firebase/config';
+import { getDoc, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-
-  const {itemId} = useParams()
   const [product, setProduct] = useState(null)
 
-  useEffect (()=>{
-    getProductsById(itemId)
-      .then(response=>{setProduct(response)
-      })
+  const {itemId} = useParams()
 
-      .catch(error=>{
-        console.error(error)
-      })
+  useEffect (()=>{
+
+    const nuevoDoc = doc(db, "productos", itemId);
+
+        getDoc(nuevoDoc)
+            .then(res => {
+                const data = res.data(); 
+                const nuevoProducto = {id: res.id, ...data}
+                setProduct(nuevoProducto);
+            })
+
+      .catch(error=>{ console.error(error) })
   },[itemId])
 
   return (
