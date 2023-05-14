@@ -51,8 +51,3 @@ const ItemDetail = ({ id, nombre, precio, img, categoria, descripcion, stock }) 
 }
 
 export default ItemDetail
-
-
-{
-  //<ItemCount stock={stock} inicial={1}  onAdd={(cantidad) => console.log("Agregaste ", cantidad," Productos")}/>
-}

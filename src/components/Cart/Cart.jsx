@@ -6,10 +6,8 @@ import CartItem from "../CartItem/CartItem"
 const Cart = () => {
     const {carrito, vaciarCarrito} = useContext(CarritoContext);
 
-    //Calculamos la cantidad total de productos en el carrito. 
     const totalCantidad = carrito.reduce((total, producto) => total + producto.cantidad, 0);
 
-    //Calculamos el precio total de los productos en el carrito.
     const total = carrito.reduce((total, producto) => total + (producto.item.precio * producto.cantidad), 0);
 
     if(totalCantidad === 0) {

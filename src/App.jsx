@@ -6,18 +6,10 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CarritoProvider } from './context/carritoContext';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
-{
-  //import Cart from "./components/Cart/Cart";
-  //import Checkout from "./components/Checkout/Checkout";
-}
 
 function App() {
   return (
-    // <>
-    // <Navbar/>
-    // <ItemListContainer/>
-    // <ItemDetailContainer/>
-    // </>
+
 
     <div>
       <BrowserRouter>

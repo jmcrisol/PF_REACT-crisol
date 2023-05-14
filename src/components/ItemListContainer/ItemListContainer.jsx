@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-//import { getProducts, getProductsByCategory } from "../../asyncmock";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
@@ -36,12 +35,3 @@ const ItemListContainer = () => {
 
 export default ItemListContainer;
 
-
-
-
-  /*const asyncFunc = categoriaId ? getProductsByCategory : getProducts
-
-  asyncFunc(categoriaId)
-  .then((response) => setProducts(response))
-  .catch((error) => console.error(error));*/
-  
