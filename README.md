@@ -1,8 +1,8 @@
-##Proyecto de tienda online con React
+# Proyecto de tienda online con React
 
 Este proyecto tiene como objetivo crear una tienda en línea utilizando React, donde los usuarios puedan ingresar, navegar por los productos y ver sus detalles, agregarlos a su carrito y realizar la compra.
 
-###Funcionalidades
+## Funcionalidades
 
 - Catálogo de productos: Los usuarios pueden navegar por los productos disponibles. La lista de productos se obtiene a través de una API de productos.
 - Detalle de productos: Al hacer clic en un producto, el usuario puede ver la descripción, foto y precio del producto. La información se obtiene a través de una API de detalle de productos.
@@ -10,7 +10,7 @@ Este proyecto tiene como objetivo crear una tienda en línea utilizando React, d
 - Carrito de compras: Los usuarios pueden ver un listado compacto de la orden con el precio total en la página del carrito de compras. La información se obtiene del carrito de la sesión actual.
 - Realizar compra: Al ingresar su nombre, apellido, teléfono e e-mail (ingresándolo dos veces para corroborar que sea correcto), se activa el botón de 'finalizar compra'. Al hacer clic en "Finalizar compra", se envía una solicitud a una API. Se guarda la orden en la base de datos y se muestra un número de orden al usuario.
 
-###Tecnologías
+## Tecnologías
 
 El proyecto se desarrollará utilizando las siguientes tecnologías:
 
@@ -38,7 +38,7 @@ Las contribuciones son bienvenidas. Para contribuir, siga estos pasos:
 1. Envíe los cambios a su rama: **git push origin mi-nueva-funcionalidad**
 1. Abra un Pull Request en el repositorio original.
 
-###Licencia
+## Licencia
 
 Este proyecto está bajo la licencia MIT. 
 
