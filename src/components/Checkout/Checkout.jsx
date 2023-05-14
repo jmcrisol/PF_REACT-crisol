@@ -4,7 +4,9 @@ import { CarritoContext } from '../../context/carritoContext'
 import { db } from '../../services/firebase/config'
 import { collection, addDoc } from 'firebase/firestore'
 
+
 const Checkout = () => {
+    
     const { carrito, vaciarCarrito } = useContext(CarritoContext);
     const [nombre, setNombre] = useState("");
     const [apellido, setApellido] = useState("");
@@ -53,8 +55,17 @@ const Checkout = () => {
     }
 
     return (
-        <div>
+        <div className='m-5'>
+
+
             <h2>Checkout</h2>
+            {
+                ordenId && (
+                    <div className='h5 p-3 bg-info bg-opacity-10 border border-info  rounded'>
+                    <strong>¡Gracias por tu compra! Tu número de orden es {ordenId} </strong>
+                    </div>
+                )
+            }
             <form onSubmit={handleSubmit}>
                 {carrito.map((producto) => (
                     <div key={producto.item.id}>
@@ -67,41 +78,42 @@ const Checkout = () => {
                 ))
                 }
                 <hr />
-                <div>
-                    <label htmlFor="">Nombre</label>
-                    <input type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                <div className='border rounded p-5 shadow-lg'>
+                <div className='col-3'>
+                    <label htmlFor="" className="form-label">Nombre</label>
+                    <input type="text" className='form-control' value={nombre} onChange={(e) => setNombre(e.target.value)} />
                 </div>
 
-                <div>
-                    <label htmlFor="">Apellido</label>
-                    <input type="text" value={apellido} onChange={(e) => setApellido(e.target.value)} />
+                <div className='col-3'>
+                    <label htmlFor="" className="form-label">Apellido</label>
+                    <input type="text" className='form-control' value={apellido} onChange={(e) => setApellido(e.target.value)} />
                 </div>
 
-                <div>
-                    <label htmlFor="">Teléfono</label>
-                    <input type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)} />
+                <div className='col-3'>
+                    <label htmlFor="" className="form-label">Teléfono</label>
+                    <input type="text" className='form-control' value={telefono} onChange={(e) => setTelefono(e.target.value)} />
                 </div>
 
-                <div>
-                    <label htmlFor="">Email </label>
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                <div className='col-3'>
+                    <label htmlFor="" className="form-label">Email </label>
+                    <input type="email" className='form-control' value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
 
-                <div>
-                    <label htmlFor="">Email Confirmación</label>
-                    <input type="email" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
+                <div className='col-3'>
+                    <label htmlFor="" className="form-label">Email Confirmación</label>
+                    <input type="email" className='form-control' value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
                 </div>
                 {error && <p style={{ color: "red" }}> {error} </p>}
-                <button type='submit'>Finalizar Compra</button>
+                <button type='submit' className="btn btn-success btnProducto mt-4">Finalizar Compra</button>
+                </div>
             </form>
-            {
-                ordenId && (
-                    <strong>¡Gracias por tu compra! Tu número de orden es {ordenId} </strong>
-                )
-            }
+          
+
+            
 
         </div>
     )
 }
+
 
 export default Checkout

@@ -27,7 +27,7 @@ return(
             <button className='Button btn btn-dark' onClick={aumenta}>+</button>
         </div>
         <div className='botonAgregar'>
-            <button className='btn-agregar mt-4 btn btn-secondary' onClick={()=> funcionAgregar(cantidad)} disabled={!stock}>Agregar al carrito
+            <button className="btn btn-dark btnProducto" onClick={()=> funcionAgregar(cantidad)} disabled={!stock}>Agregar al carrito
             </button>
         </div>
     </div>
